@@ -76,6 +76,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540E8EDE24AF10B200CA4779 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				540E8EDF24AF10BB00CA4779 /* Requests */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		540E8EDF24AF10BB00CA4779 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		54604BD224AF0D23005E59E2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +114,9 @@
 		54604BDD24AF0D23005E59E2 /* globee_kadai */ = {
 			isa = PBXGroup;
 			children = (
-				54604BDE24AF0D23005E59E2 /* AppDelegate.swift */,
-				54604BE024AF0D23005E59E2 /* SceneDelegate.swift */,
-				54604BE224AF0D23005E59E2 /* ViewController.swift */,
+				54604C0F24AF0E85005E59E2 /* Libraries */,
+				54604C1024AF0EA0005E59E2 /* Presentations */,
+				54604C0E24AF0E76005E59E2 /* Data */,
 				54604BE424AF0D23005E59E2 /* Main.storyboard */,
 				54604BE724AF0D25005E59E2 /* Assets.xcassets */,
 				54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */,
@@ -126,6 +141,47 @@
 				54604C0224AF0D25005E59E2 /* Info.plist */,
 			);
 			path = globee_kadaiUITests;
+			sourceTree = "<group>";
+		};
+		54604C0E24AF0E76005E59E2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				540E8EDE24AF10B200CA4779 /* Networks */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		54604C0F24AF0E85005E59E2 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		54604C1024AF0EA0005E59E2 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				54604C1124AF0EFC005E59E2 /* Book */,
+				54604C1224AF0F00005E59E2 /* BookDetail */,
+				54604BDE24AF0D23005E59E2 /* AppDelegate.swift */,
+				54604BE024AF0D23005E59E2 /* SceneDelegate.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		54604C1124AF0EFC005E59E2 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				54604BE224AF0D23005E59E2 /* ViewController.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		54604C1224AF0F00005E59E2 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
