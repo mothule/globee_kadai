@@ -19,10 +19,12 @@
 		540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */; };
 		540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFC24B2589A00CA4779 /* BookListViewController.swift */; };
 		540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */; };
+		540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8F0024B363C600CA4779 /* BookListTopViewController.storyboard */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* ViewController.swift */; };
 		54604BE624AF0D23005E59E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE424AF0D23005E59E2 /* Main.storyboard */; };
+		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
 		54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE724AF0D25005E59E2 /* Assets.xcassets */; };
 		54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */; };
 		54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BF524AF0D25005E59E2 /* globee_kadaiTests.swift */; };
@@ -59,11 +61,12 @@
 		540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		540E8EFC24B2589A00CA4779 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookListViewController.storyboard; sourceTree = "<group>"; };
+		540E8F0024B363C600CA4779 /* BookListTopViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookListTopViewController.storyboard; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		54604BE224AF0D23005E59E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		54604BE524AF0D23005E59E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTopViewController.swift; sourceTree = "<group>"; };
 		54604BE724AF0D25005E59E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54604BEA24AF0D25005E59E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54604BEC24AF0D25005E59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				54604BE224AF0D23005E59E2 /* ViewController.swift */,
+				54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */,
+				540E8F0024B363C600CA4779 /* BookListTopViewController.storyboard */,
 				540E8EFC24B2589A00CA4779 /* BookListViewController.swift */,
 				540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */,
 			);
@@ -343,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */,
 				54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */,
 				54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */,
 				54604BE624AF0D23005E59E2 /* Main.storyboard in Resources */,
@@ -398,6 +404,7 @@
 			files = (
 				54604BE324AF0D23005E59E2 /* ViewController.swift in Sources */,
 				540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */,
+				54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */,
 				540E8EE324AF129300CA4779 /* Collection+Extension.swift in Sources */,
 				540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */,
 				54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */,
