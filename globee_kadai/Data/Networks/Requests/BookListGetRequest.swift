@@ -100,7 +100,7 @@ struct Book {
         hasContents = json["has_contents"].intValue > 0
         hasPurchased = json["has_purchased"].boolValue
         idBook = json["id_book"].stringValue
-        imageUrl = json["image_url"].stringValue
+        imageUrl = json["img_url"].stringValue
         isUnlimited = json["is_unlimited"].intValue > 0
         nameBook = json["name_book"].stringValue
         publisher = json["publisher"].stringValue
