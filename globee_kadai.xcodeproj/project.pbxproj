@@ -22,7 +22,6 @@
 		540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8F0024B363C600CA4779 /* BookListTopViewController.storQyboard */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
-		54604BE624AF0D23005E59E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE424AF0D23005E59E2 /* Main.storyboard */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
 		54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE724AF0D25005E59E2 /* Assets.xcassets */; };
 		54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */; };
@@ -164,7 +163,6 @@
 				54604C1024AF0EA0005E59E2 /* Presentations */,
 				540E8EEE24AF263100CA4779 /* Models */,
 				54604C0E24AF0E76005E59E2 /* Data */,
-				54604BE424AF0D23005E59E2 /* Main.storyboard */,
 				54604BE724AF0D25005E59E2 /* Assets.xcassets */,
 				54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */,
 				54604BEC24AF0D25005E59E2 /* Info.plist */,
@@ -348,7 +346,6 @@
 				540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */,
 				54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */,
 				54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */,
-				54604BE624AF0D23005E59E2 /* Main.storyboard in Resources */,
 				540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +443,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		54604BE424AF0D23005E59E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54604BE524AF0D23005E59E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
