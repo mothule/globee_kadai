@@ -17,6 +17,8 @@
 		540E8EF724AF2D4500CA4779 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF624AF2D4500CA4779 /* String+Date.swift */; };
 		540E8EF924AF452C00CA4779 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF824AF452C00CA4779 /* BookDetailViewController.swift */; };
 		540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */; };
+		540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFC24B2589A00CA4779 /* BookListViewController.swift */; };
+		540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 		540E8EF624AF2D4500CA4779 /* String+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		540E8EF824AF452C00CA4779 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		540E8EFC24B2589A00CA4779 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookListViewController.storyboard; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,7 +212,7 @@
 		54604C1024AF0EA0005E59E2 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				54604C1124AF0EFC005E59E2 /* Book */,
+				54604C1124AF0EFC005E59E2 /* BookList */,
 				54604C1224AF0F00005E59E2 /* BookDetail */,
 				54604BDE24AF0D23005E59E2 /* AppDelegate.swift */,
 				54604BE024AF0D23005E59E2 /* SceneDelegate.swift */,
@@ -216,12 +220,14 @@
 			path = Presentations;
 			sourceTree = "<group>";
 		};
-		54604C1124AF0EFC005E59E2 /* Book */ = {
+		54604C1124AF0EFC005E59E2 /* BookList */ = {
 			isa = PBXGroup;
 			children = (
 				54604BE224AF0D23005E59E2 /* ViewController.swift */,
+				540E8EFC24B2589A00CA4779 /* BookListViewController.swift */,
+				540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */,
 			);
-			path = Book;
+			path = BookList;
 			sourceTree = "<group>";
 		};
 		54604C1224AF0F00005E59E2 /* BookDetail */ = {
@@ -340,6 +346,7 @@
 				54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */,
 				54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */,
 				54604BE624AF0D23005E59E2 /* Main.storyboard in Resources */,
+				540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +401,7 @@
 				540E8EE324AF129300CA4779 /* Collection+Extension.swift in Sources */,
 				540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */,
 				54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */,
+				540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */,
 				540E8EF924AF452C00CA4779 /* BookDetailViewController.swift in Sources */,
 				540E8EF024AF27D200CA4779 /* BookListGetRequest.swift in Sources */,
 				540E8EF724AF2D4500CA4779 /* String+Date.swift in Sources */,
