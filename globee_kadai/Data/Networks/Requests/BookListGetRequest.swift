@@ -43,8 +43,8 @@ struct BookListGetResponse {
  ## JSON format
  ```JSON
  {
-    "book_list": [],
-    "id_category": "_ranking",
+     "book_list": [],
+     "id_category": "_ranking",
      "is_ranking": true,
      "name_category": "人気ランキング",
      "need_load_more": true
