@@ -13,12 +13,18 @@ import UIKit
 class BookListPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     // TODO: 型を用意する
-    private var bookList: [BookListGetResponse] = [] 
+    private var bookCollection: BookCollection = .init() {
+        didSet {
+            pageContents = bookCollection.topCategorizedBookLineList.map { bookListViewController(bookList: $0) }
+        }
+    }
+//    private var bookList: [BookListGetResponse] = []
     private var pageContents: [BookListViewController] = []
     
-    func setup(bookList: [BookListGetResponse]) {
-        self.bookList = bookList
-        pageContents = bookList.map { bookListViewController(bookList: $0) }
+    func setup(bookCollection: BookCollection) {
+        self.bookCollection = bookCollection
+//        self.bookList = bookList
+//        pageContents = bookList.map { bookListViewController(bookList: $0) }
         setViewControllers([pageContents.first!],
                            direction: .forward,
                            animated: true,
@@ -39,7 +45,7 @@ class BookListPageViewController: UIPageViewController, UIPageViewControllerData
         setViewControllers([vc], direction: direction, animated: true, completion: nil)
     }
     
-    private func bookListViewController(bookList: BookListGetResponse) -> BookListViewController {
+    private func bookListViewController(bookList: TopCategorizedBookLine) -> BookListViewController {
         let vc = BookListViewController.instance()
         vc.setup(bookList: bookList)
         return vc

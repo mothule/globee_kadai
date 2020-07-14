@@ -27,6 +27,16 @@
 		5454AD2124BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD2024BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift */; };
 		5454AD2324BD8E55005E9E66 /* SDWebImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD2224BD8E55005E9E66 /* SDWebImage+Extension.swift */; };
 		5454AD2824BD90AB005E9E66 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD2724BD90AB005E9E66 /* SDWebImage.framework */; };
+		5454AD2D24BDA100005E9E66 /* BookCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD2C24BDA100005E9E66 /* BookCollectionRepository.swift */; };
+		5454AD3024BDA44A005E9E66 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD2F24BDA44A005E9E66 /* MemoryCache.swift */; };
+		5454AD3224BDA4E5005E9E66 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3124BDA4E4005E9E66 /* Int+Extension.swift */; };
+		5454AD3424BDA500005E9E66 /* NSNumber+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3324BDA500005E9E66 /* NSNumber+String.swift */; };
+		5454AD3724BDA596005E9E66 /* EzTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3624BDA596005E9E66 /* EzTask.swift */; };
+		5454AD3924BDB163005E9E66 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3824BDB163005E9E66 /* String+Extension.swift */; };
+		5454AD3B24BDB347005E9E66 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3A24BDB347005E9E66 /* BookCollection.swift */; };
+		5454AD3D24BDB3D6005E9E66 /* TopCategorizedBookLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3C24BDB3D6005E9E66 /* TopCategorizedBookLine.swift */; };
+		5454AD3F24BDB3EC005E9E66 /* SubCategorizedBookLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD3E24BDB3EC005E9E66 /* SubCategorizedBookLine.swift */; };
+		5454AD4124BDB418005E9E66 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD4024BDB418005E9E66 /* Book.swift */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
@@ -75,6 +85,16 @@
 		5454AD2024BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+ClassName.swift"; sourceTree = "<group>"; };
 		5454AD2224BD8E55005E9E66 /* SDWebImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDWebImage+Extension.swift"; sourceTree = "<group>"; };
 		5454AD2724BD90AB005E9E66 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		5454AD2C24BDA100005E9E66 /* BookCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionRepository.swift; sourceTree = "<group>"; };
+		5454AD2F24BDA44A005E9E66 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		5454AD3124BDA4E4005E9E66 /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		5454AD3324BDA500005E9E66 /* NSNumber+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+String.swift"; sourceTree = "<group>"; };
+		5454AD3624BDA596005E9E66 /* EzTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzTask.swift; sourceTree = "<group>"; };
+		5454AD3824BDB163005E9E66 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		5454AD3A24BDB347005E9E66 /* BookCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
+		5454AD3C24BDB3D6005E9E66 /* TopCategorizedBookLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategorizedBookLine.swift; sourceTree = "<group>"; };
+		5454AD3E24BDB3EC005E9E66 /* SubCategorizedBookLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategorizedBookLine.swift; sourceTree = "<group>"; };
+		5454AD4024BDB418005E9E66 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +169,10 @@
 		540E8EEE24AF263100CA4779 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD3A24BDB347005E9E66 /* BookCollection.swift */,
+				5454AD3C24BDB3D6005E9E66 /* TopCategorizedBookLine.swift */,
+				5454AD3E24BDB3EC005E9E66 /* SubCategorizedBookLine.swift */,
+				5454AD4024BDB418005E9E66 /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,9 +191,36 @@
 		5454AD1F24BCD67F005E9E66 /* Foundation+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD3324BDA500005E9E66 /* NSNumber+String.swift */,
+				5454AD3824BDB163005E9E66 /* String+Extension.swift */,
+				5454AD3124BDA4E4005E9E66 /* Int+Extension.swift */,
 				5454AD2024BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift */,
 			);
 			path = "Foundation+Extensions";
+			sourceTree = "<group>";
+		};
+		5454AD2B24BDA037005E9E66 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5454AD2C24BDA100005E9E66 /* BookCollectionRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5454AD2E24BDA43C005E9E66 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5454AD2F24BDA44A005E9E66 /* MemoryCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		5454AD3524BDA580005E9E66 /* EzTask */ = {
+			isa = PBXGroup;
+			children = (
+				5454AD3624BDA596005E9E66 /* EzTask.swift */,
+			);
+			path = EzTask;
 			sourceTree = "<group>";
 		};
 		54604BD224AF0D23005E59E2 = {
@@ -228,6 +279,7 @@
 		54604C0E24AF0E76005E59E2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD2B24BDA037005E9E66 /* Repositories */,
 				540E8EDE24AF10B200CA4779 /* Networks */,
 			);
 			path = Data;
@@ -236,6 +288,8 @@
 		54604C0F24AF0E85005E59E2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD3524BDA580005E9E66 /* EzTask */,
+				5454AD2E24BDA43C005E9E66 /* Cache */,
 				5454AD1F24BCD67F005E9E66 /* Foundation+Extensions */,
 				5454AD1124BCD64A005E9E66 /* UIKit+Extensions */,
 				5454AD2224BD8E55005E9E66 /* SDWebImage+Extension.swift */,
@@ -439,23 +493,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5454AD2D24BDA100005E9E66 /* BookCollectionRepository.swift in Sources */,
+				5454AD3724BDA596005E9E66 /* EzTask.swift in Sources */,
 				5454AD2124BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift in Sources */,
 				540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */,
+				5454AD3B24BDB347005E9E66 /* BookCollection.swift in Sources */,
 				54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */,
 				5454AD1C24BCD64A005E9E66 /* Storyboardable.swift in Sources */,
+				5454AD3224BDA4E5005E9E66 /* Int+Extension.swift in Sources */,
 				54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */,
+				5454AD3924BDB163005E9E66 /* String+Extension.swift in Sources */,
 				540E8EE324AF129300CA4779 /* Collection+Extension.swift in Sources */,
 				5454AD1B24BCD64A005E9E66 /* UICollectionView+Cell.swift in Sources */,
 				540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */,
 				5454AD1D24BCD64A005E9E66 /* Nibable.swift in Sources */,
 				54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */,
+				5454AD3D24BDB3D6005E9E66 /* TopCategorizedBookLine.swift in Sources */,
 				540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */,
+				5454AD3F24BDB3EC005E9E66 /* SubCategorizedBookLine.swift in Sources */,
+				5454AD4124BDB418005E9E66 /* Book.swift in Sources */,
 				5454AD1A24BCD64A005E9E66 /* UITableView+Cell.swift in Sources */,
 				540E8EF924AF452C00CA4779 /* BookDetailViewController.swift in Sources */,
+				5454AD3424BDA500005E9E66 /* NSNumber+String.swift in Sources */,
 				540E8EF024AF27D200CA4779 /* BookListGetRequest.swift in Sources */,
 				540E8EF724AF2D4500CA4779 /* String+Date.swift in Sources */,
 				540E8EEB24AF190D00CA4779 /* APIClient.swift in Sources */,
 				540E8EF524AF2B5D00CA4779 /* TimeZone+Extension.swift in Sources */,
+				5454AD3024BDA44A005E9E66 /* MemoryCache.swift in Sources */,
 				5454AD2324BD8E55005E9E66 /* SDWebImage+Extension.swift in Sources */,
 				54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */,
 			);

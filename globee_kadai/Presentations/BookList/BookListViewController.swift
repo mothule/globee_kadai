@@ -13,13 +13,13 @@ class BookListViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var tableView: UITableView!
 
     // TODO: 型を用意する
-    private var bookList: BookListGetResponse? = nil {
+    private var bookList: TopCategorizedBookLine? = nil {
         didSet {
             tableView?.reloadData()
         }
     }
     
-    func setup(bookList: BookListGetResponse) {
+    func setup(bookList: TopCategorizedBookLine) {
         self.bookList = bookList
     }
 
@@ -56,7 +56,7 @@ class BookSubCategoryTableViewCell: UITableViewCell, Nibable {
     @IBOutlet private weak var categoryName: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private var subCategory: SubCategory? = nil {
+    private var subCategory: SubCategorizedBookLine? = nil {
         didSet {
             collectionView?.reloadData()
         }
@@ -65,7 +65,7 @@ class BookSubCategoryTableViewCell: UITableViewCell, Nibable {
         subCategory?.bookList ?? []
     }
     
-    func setup(with subCategory: SubCategory) {
+    func setup(with subCategory: SubCategorizedBookLine) {
         initializeCollection()
         self.subCategory = subCategory
         categoryName.text = subCategory.nameCategory
