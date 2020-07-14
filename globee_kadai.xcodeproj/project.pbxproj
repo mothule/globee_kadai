@@ -32,6 +32,7 @@
 		54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */; };
 		54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BF524AF0D25005E59E2 /* globee_kadaiTests.swift */; };
 		54604C0124AF0D25005E59E2 /* globee_kadaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */; };
+		54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B74C7724B4F78200F6640D /* BookListPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		54604BFC24AF0D25005E59E2 /* globee_kadaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = globee_kadaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globee_kadaiUITests.swift; sourceTree = "<group>"; };
 		54604C0224AF0D25005E59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B74C7724B4F78200F6640D /* BookListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			children = (
 				54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */,
 				540E8F0024B363C600CA4779 /* BookListTopViewController.storyboard */,
+				54B74C7724B4F78200F6640D /* BookListPageViewController.swift */,
 				540E8EFC24B2589A00CA4779 /* BookListViewController.swift */,
 				540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */,
 			);
