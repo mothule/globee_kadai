@@ -31,12 +31,9 @@ class BookListTopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initializeCollectionView()
-        
         title = "見つける"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .never
+
+        initializeCollectionView()
         
         // embed page vc to container view.
         pageViewController = BookListPageViewController(
@@ -61,9 +58,28 @@ class BookListTopViewController: UIViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        BookSubCategoryTableViewCell.Notice.selectBook(nil).addObserver(self, selector: #selector(onSelectedBook(_:)))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     private func onUpdatedBookCollection() {
         pageViewController?.setup(bookCollection: bookCollection)
         headerTabView?.reloadData()
+    }
+    
+    @objc private func onSelectedBook(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let book = userInfo["book"] as? Book else { return }
+        
+        let vc = BookDetailViewController.instance()
+        vc.setup(book: book)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

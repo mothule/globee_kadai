@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3eW-o3-kHz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book Detail View Controller-->
+        <scene sceneID="eJI-JY-f3J">
+            <objects>
+                <viewController storyboardIdentifier="BookDetailViewController" id="3eW-o3-kHz" customClass="BookDetailViewController" customModule="globee_kadai" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vy-3i-T9O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pF1-8P-SQ4" customClass="BookImageView" customModule="globee_kadai" customModuleProvider="target">
+                                <rect key="frame" x="16" y="56" width="90" height="122.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122.5" id="JIu-6v-bQL"/>
+                                    <constraint firstAttribute="width" priority="750" constant="90" id="oZU-qb-qGQ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-Xc-Dac">
+                                <rect key="frame" x="122" y="56" width="276" height="122.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOEIC L&amp;R テスト 文法問題 でる1000問 でるよ！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTH-Nu-iA6">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="28"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出版社：なかむらあｓｄふぁｓｄふぁｓｄｆ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYR-zs-M6E">
+                                        <rect key="frame" x="0.0" y="54" width="276" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="xXh-dG-ePi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者：なかむらあｓｄふぁｓｄふぁｓｄｆ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgD-j7-zdM">
+                                        <rect key="frame" x="0.0" y="36" width="276" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="Q12-Bn-KUo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-ya-OBv">
+                                        <rect key="frame" x="0.0" y="94.5" width="134" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="B7A-7I-LrI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                        <state key="normal" title="MyBooks追加">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchedAddMyBooksButton:" destination="3eW-o3-kHz" eventType="touchUpInside" id="zRm-TS-2Zr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-2H-NGf">
+                                        <rect key="frame" x="142" y="94.5" width="134" height="28"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                                        <state key="normal" title="トライアル中">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AMO-ya-OBv" firstAttribute="leading" secondItem="zd1-Xc-Dac" secondAttribute="leading" id="3b4-L5-wS1"/>
+                                    <constraint firstItem="JTH-Nu-iA6" firstAttribute="leading" secondItem="zd1-Xc-Dac" secondAttribute="leading" id="8ZO-S6-HkV"/>
+                                    <constraint firstAttribute="trailing" secondItem="HYR-zs-M6E" secondAttribute="trailing" id="DiR-fo-6dU"/>
+                                    <constraint firstAttribute="trailing" secondItem="eO6-2H-NGf" secondAttribute="trailing" id="EEA-JS-Iam"/>
+                                    <constraint firstItem="eO6-2H-NGf" firstAttribute="width" secondItem="AMO-ya-OBv" secondAttribute="width" id="HcD-Nl-uxg"/>
+                                    <constraint firstItem="HYR-zs-M6E" firstAttribute="top" secondItem="wgD-j7-zdM" secondAttribute="bottom" constant="4" id="RYn-2T-yKS"/>
+                                    <constraint firstItem="wgD-j7-zdM" firstAttribute="leading" secondItem="zd1-Xc-Dac" secondAttribute="leading" id="VaD-nb-ocd"/>
+                                    <constraint firstItem="eO6-2H-NGf" firstAttribute="leading" secondItem="AMO-ya-OBv" secondAttribute="trailing" constant="8" id="ZrA-71-5X6"/>
+                                    <constraint firstAttribute="trailing" secondItem="wgD-j7-zdM" secondAttribute="trailing" id="cFM-ZF-Ohl"/>
+                                    <constraint firstAttribute="bottom" secondItem="AMO-ya-OBv" secondAttribute="bottom" id="fWP-93-xwW"/>
+                                    <constraint firstItem="HYR-zs-M6E" firstAttribute="leading" secondItem="zd1-Xc-Dac" secondAttribute="leading" id="hRX-xt-PfT"/>
+                                    <constraint firstAttribute="trailing" secondItem="JTH-Nu-iA6" secondAttribute="trailing" id="qai-RL-Jol"/>
+                                    <constraint firstItem="eO6-2H-NGf" firstAttribute="top" secondItem="AMO-ya-OBv" secondAttribute="top" id="t6w-Iq-05J"/>
+                                    <constraint firstItem="JTH-Nu-iA6" firstAttribute="top" secondItem="zd1-Xc-Dac" secondAttribute="top" id="tJJ-4I-Hrh"/>
+                                    <constraint firstItem="wgD-j7-zdM" firstAttribute="top" secondItem="JTH-Nu-iA6" secondAttribute="bottom" constant="8" id="unx-s1-8Np"/>
+                                    <constraint firstItem="eO6-2H-NGf" firstAttribute="height" secondItem="AMO-ya-OBv" secondAttribute="height" id="wAy-Pa-y1C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zd1-Xc-Dac" firstAttribute="bottom" secondItem="pF1-8P-SQ4" secondAttribute="bottom" id="C8S-Jz-7VI"/>
+                            <constraint firstItem="pF1-8P-SQ4" firstAttribute="top" secondItem="wtA-jh-kOv" secondAttribute="top" constant="12" id="Ecx-Zm-dLs"/>
+                            <constraint firstItem="pF1-8P-SQ4" firstAttribute="leading" secondItem="wtA-jh-kOv" secondAttribute="leading" constant="16" id="Hib-Nk-dUg"/>
+                            <constraint firstItem="zd1-Xc-Dac" firstAttribute="leading" secondItem="pF1-8P-SQ4" secondAttribute="trailing" constant="16" id="oYh-UK-SfS"/>
+                            <constraint firstItem="zd1-Xc-Dac" firstAttribute="top" secondItem="pF1-8P-SQ4" secondAttribute="top" id="vhH-rd-uUe"/>
+                            <constraint firstItem="wtA-jh-kOv" firstAttribute="trailing" secondItem="zd1-Xc-Dac" secondAttribute="trailing" constant="16" id="waj-LW-bDw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wtA-jh-kOv"/>
+                    </view>
+                    <connections>
+                        <outlet property="addMyBookButton" destination="AMO-ya-OBv" id="Pt4-Vl-1RN"/>
+                        <outlet property="authorLabel" destination="wgD-j7-zdM" id="JBX-t4-dyI"/>
+                        <outlet property="bookImageView" destination="pF1-8P-SQ4" id="6O7-kB-dMG"/>
+                        <outlet property="bookTitleLabel" destination="JTH-Nu-iA6" id="6Ab-V5-3DF"/>
+                        <outlet property="publisherLabel" destination="HYR-zs-M6E" id="TRC-NT-vZZ"/>
+                        <outlet property="purchaseButton" destination="eO6-2H-NGf" id="VvB-PD-IxD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXc-bP-pCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352.17391304347831" y="-168.08035714285714"/>
+        </scene>
+    </scenes>
+</document>

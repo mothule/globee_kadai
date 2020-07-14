@@ -53,6 +53,18 @@ extension BookListViewController: UITableViewDataSource {
 }
 
 class BookSubCategoryTableViewCell: UITableViewCell, Nibable {
+    enum Notice: Notificationable {
+        case selectBook(Book?)
+        
+        var noticeUserInfo: [AnyHashable : Any]? {
+            if case .selectBook(let book) = self {
+                return ["book": book!]
+            }
+            return nil
+        }
+        var noticeName: String { "BookSubCategoryTableViewCellSelectBook" }
+    }
+        
     @IBOutlet private weak var categoryName: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -72,9 +84,10 @@ class BookSubCategoryTableViewCell: UITableViewCell, Nibable {
     }
 }
 
-extension BookSubCategoryTableViewCell: UICollectionViewDataSource {
+extension BookSubCategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     private func initializeCollection() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0.0
@@ -91,29 +104,22 @@ extension BookSubCategoryTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(BookCollectionViewCell.self, for: indexPath)
-        
         if let book = bookList[safe: indexPath.row] {
             cell.setup(with: book)
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        guard let book = bookList[safe: indexPath.row] else { return }
+        Notice.selectBook(book).post()
+    }
 }
 
 class BookCollectionViewCell: UICollectionViewCell, Nibable {
-    @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var aspectConstraint: NSLayoutConstraint!
-    
+    @IBOutlet private weak var imageView: BookImageView!    
     func setup(with book: Book) {
-        imageView.sd_setImageWithFadeIn(url: book.imageUrl) { [weak self] _ in
-            self?.setupShadow()
-        }
-    }
-    
-    private func setupShadow() {
-        imageView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowOpacity = 0.7
-        imageView.layer.shadowRadius = 1
-        imageView.layer.masksToBounds = false
+        imageView.setup(with: book.imageUrl)
     }
 }
