@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        initializeSDWebImage()
         return true
     }
 
@@ -34,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    private func initializeSDWebImage() {
+        let cache = SDWebImageManager.shared.imageCache as! SDImageCache
+        let config = cache.config
+        // 180 × 260 x 4(ARGB8888) = 187,200 bytes / image
+        config.maxMemoryCost = (600 * 500) * 500 // 商品画像500枚程度
+    }
 }
 

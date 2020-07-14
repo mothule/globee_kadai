@@ -104,28 +104,16 @@ class BookCollectionViewCell: UICollectionViewCell, Nibable {
     @IBOutlet private weak var aspectConstraint: NSLayoutConstraint!
     
     func setup(with book: Book) {
-        guard let url = URL(string: book.imageUrl) else { return }
-        URLSession.shared.dataTask(with: url) { [weak self] (data, res, error) in
-            guard let self = self else { return }
-            if let data = data {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self.setImage(image)
-                    }
-                }
-            }
-        }.resume()
+        imageView.sd_setImageWithFadeIn(url: book.imageUrl) { [weak self] _ in
+            self?.setupShadow()
+        }
     }
     
-    func setImage(_ image: UIImage) {
-        imageView.image = image
-        
+    private func setupShadow() {
         imageView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         imageView.layer.shadowColor = UIColor.black.cgColor
         imageView.layer.shadowOpacity = 0.7
         imageView.layer.shadowRadius = 1
         imageView.layer.masksToBounds = false
     }
-    
-    
 }
