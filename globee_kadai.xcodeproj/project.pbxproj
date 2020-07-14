@@ -19,7 +19,7 @@
 		540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */; };
 		540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EFC24B2589A00CA4779 /* BookListViewController.swift */; };
 		540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8EFE24B258AA00CA4779 /* BookListViewController.storyboard */; };
-		540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8F0024B363C600CA4779 /* BookListTopViewController.storQyboard */; };
+		540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E8F0024B363C600CA4779 /* BookListTopViewController.storyboard */; };
 		5454AD1A24BCD64A005E9E66 /* UITableView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD1224BCD64A005E9E66 /* UITableView+Cell.swift */; };
 		5454AD1B24BCD64A005E9E66 /* UICollectionView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD1324BCD64A005E9E66 /* UICollectionView+Cell.swift */; };
 		5454AD1C24BCD64A005E9E66 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD1424BCD64A005E9E66 /* Storyboardable.swift */; };
