@@ -41,6 +41,8 @@
 		5454AD4624BDB9E1005E9E66 /* BookDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5454AD4524BDB9E1005E9E66 /* BookDetailViewController.storyboard */; };
 		5454AD4924BDBF4D005E9E66 /* AttributedStringDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD4824BDBF4D005E9E66 /* AttributedStringDecorator.swift */; };
 		5454AD4C24BDC3AC005E9E66 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */; };
+		5454AD4F24BDEB39005E9E66 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */; };
+		5454AD5024BDEB39005E9E66 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD4E24BDEB39005E9E66 /* Realm.framework */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
@@ -103,6 +105,8 @@
 		5454AD4524BDB9E1005E9E66 /* BookDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookDetailViewController.storyboard; sourceTree = "<group>"; };
 		5454AD4824BDBF4D005E9E66 /* AttributedStringDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringDecorator.swift; sourceTree = "<group>"; };
 		5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
+		5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		5454AD4E24BDEB39005E9E66 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5454AD5024BDEB39005E9E66 /* Realm.framework in Frameworks */,
+				5454AD4F24BDEB39005E9E66 /* RealmSwift.framework in Frameworks */,
 				540E8EE624AF136300CA4779 /* Alamofire.framework in Frameworks */,
 				5454AD2824BD90AB005E9E66 /* SDWebImage.framework in Frameworks */,
 				540E8EED24AF1B0F00CA4779 /* SwiftyJSON.framework in Frameworks */,
@@ -167,6 +173,8 @@
 		540E8EE424AF136200CA4779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD4E24BDEB39005E9E66 /* Realm.framework */,
+				5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */,
 				5454AD2724BD90AB005E9E66 /* SDWebImage.framework */,
 				540E8EEC24AF1B0F00CA4779 /* SwiftyJSON.framework */,
 				540E8EE524AF136300CA4779 /* Alamofire.framework */,
@@ -510,6 +518,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = "Carthage copy-frameworks";
 			outputFileListPaths = (
@@ -518,6 +528,8 @@
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SDWebImage.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
