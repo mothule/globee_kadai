@@ -43,6 +43,8 @@
 		5454AD4C24BDC3AC005E9E66 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */; };
 		5454AD4F24BDEB39005E9E66 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */; };
 		5454AD5024BDEB39005E9E66 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD4E24BDEB39005E9E66 /* Realm.framework */; };
+		5454AD5324BE008E005E9E66 /* MyBookRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5224BE008E005E9E66 /* MyBookRecord.swift */; };
+		5454AD5524BE03E1005E9E66 /* MyBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
@@ -107,6 +109,8 @@
 		5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
 		5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		5454AD4E24BDEB39005E9E66 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		5454AD5224BE008E005E9E66 /* MyBookRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRecord.swift; sourceTree = "<group>"; };
+		5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRepository.swift; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5454AD2C24BDA100005E9E66 /* BookCollectionRepository.swift */,
+				5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -261,6 +266,14 @@
 				5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5454AD5124BDFF2D005E9E66 /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				5454AD5224BE008E005E9E66 /* MyBookRecord.swift */,
+			);
+			path = Databases;
 			sourceTree = "<group>";
 		};
 		54604BD224AF0D23005E59E2 = {
@@ -320,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				5454AD2B24BDA037005E9E66 /* Repositories */,
+				5454AD5124BDFF2D005E9E66 /* Databases */,
 				540E8EDE24AF10B200CA4779 /* Networks */,
 			);
 			path = Data;
@@ -546,6 +560,7 @@
 				5454AD4924BDBF4D005E9E66 /* AttributedStringDecorator.swift in Sources */,
 				5454AD3724BDA596005E9E66 /* EzTask.swift in Sources */,
 				5454AD2124BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift in Sources */,
+				5454AD5324BE008E005E9E66 /* MyBookRecord.swift in Sources */,
 				540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */,
 				5454AD3B24BDB347005E9E66 /* BookCollection.swift in Sources */,
 				54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */,
@@ -559,6 +574,7 @@
 				5454AD1D24BCD64A005E9E66 /* Nibable.swift in Sources */,
 				54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */,
 				5454AD3D24BDB3D6005E9E66 /* TopCategorizedBookLine.swift in Sources */,
+				5454AD5524BE03E1005E9E66 /* MyBookRepository.swift in Sources */,
 				540E8EFD24B2589A00CA4779 /* BookListViewController.swift in Sources */,
 				5454AD3F24BDB3EC005E9E66 /* SubCategorizedBookLine.swift in Sources */,
 				5454AD4124BDB418005E9E66 /* Book.swift in Sources */,
