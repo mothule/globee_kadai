@@ -9,35 +9,23 @@
 import UIKit
 
 
-class BookListViewController: UIViewController {
+class BookListViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var tableView: UITableView!
-    
+
     // TODO: 型を用意する
     private var bookList: BookListGetResponse? = nil {
         didSet {
             tableView?.reloadData()
         }
     }
+    
+    func setup(bookList: BookListGetResponse) {
+        self.bookList = bookList
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeTable()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let req = BookListGetRequest()
-        APIClient.shared.send(request: req) { [weak self] result in
-            switch result {
-            case .success(let response):
-                let bookList = BookListGetResponse.parse(from: response.value).first
-                self?.bookList = bookList
-                
-            case .failure(let error):
-                debugPrint(error)
-            }
-        }
     }
 }
 
@@ -53,7 +41,7 @@ extension BookListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookSubCategoryTableViewCell", for: indexPath) as! BookSubCategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(BookSubCategoryTableViewCell.self, for: indexPath)
         
         if let subCategory = bookList?.subCategoryList[safe: indexPath.row] {
             cell.setup(with: subCategory)
@@ -64,9 +52,10 @@ extension BookListViewController: UITableViewDataSource {
     }
 }
 
-class BookSubCategoryTableViewCell: UITableViewCell {
+class BookSubCategoryTableViewCell: UITableViewCell, Nibable {
     @IBOutlet private weak var categoryName: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    
     private var subCategory: SubCategory? = nil {
         didSet {
             collectionView?.reloadData()
@@ -93,7 +82,6 @@ extension BookSubCategoryTableViewCell: UICollectionViewDataSource {
         layout.sectionInset = .zero
         layout.itemSize = .init(width: 110, height: 150)
         
-        
         collectionView.collectionViewLayout = layout
     }
     
@@ -102,8 +90,7 @@ extension BookSubCategoryTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCollectionViewCell", for: indexPath) as! BookCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(BookCollectionViewCell.self, for: indexPath)
         
         if let book = bookList[safe: indexPath.row] {
             cell.setup(with: book)
@@ -112,14 +99,9 @@ extension BookSubCategoryTableViewCell: UICollectionViewDataSource {
     }
 }
 
-class BookCollectionViewCell: UICollectionViewCell {
+class BookCollectionViewCell: UICollectionViewCell, Nibable {
     @IBOutlet private weak var imageView: UIImageView!
-    
-    @IBOutlet weak var aspectConstraint: NSLayoutConstraint!
-    
-    private var notification: Notification {
-        .init(name: Notification.Name(rawValue: "BookCollectionViewCell"))
-    }
+    @IBOutlet private weak var aspectConstraint: NSLayoutConstraint!
     
     func setup(with book: Book) {
         guard let url = URL(string: book.imageUrl) else { return }
@@ -129,13 +111,10 @@ class BookCollectionViewCell: UICollectionViewCell {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self.setImage(image)
-                        NotificationCenter.default.post(self.notification)
                     }
                 }
             }
         }.resume()
-        
-        
     }
     
     func setImage(_ image: UIImage) {

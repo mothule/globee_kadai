@@ -11,17 +11,19 @@ import Alamofire
 
 class BookListTopViewController: UIViewController {
     @IBOutlet private weak var headerTabView: UICollectionView!
-    private var headerTabViewController: UIViewController?
     @IBOutlet private weak var pageViewContainer: UIView!
+    private var pageViewController: BookListPageViewController!
+    // TODO: モデル用意
+    private var bookList: [BookListGetResponse] = []
     
     
-    
-    private var tabItems: [String] {
-        ["すべて", "Unlimited", "TOEIC", "英検", "英会話"]
+    private var tabItems: [String] { bookList.map { $0.nameCategory } }
+    private var currentPageIndex: Int = 0 {
+        didSet {
+            pageViewController?.navigateViewControllerDirect(at: currentPageIndex, from: oldValue)
+        }
     }
-    private var currentPageIndex: Int = 0
 
-    
 
 //    07/03 14:37 ~ 20:53
     
@@ -34,32 +36,37 @@ class BookListTopViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .never
         
-//        navigationItem.prompt = "Prompt"
-//        navigationItem.rightBarButtonItem = .init(title: "右ボタン", style: .plain, target: self, action: #selector(onTouchedRightButton(_:)))
-//        navigationItem.leftBarButtonItem = .init(title: "右ボタン", style: .plain, target: self, action: #selector(onTouchedRightButton(_:)))
+        pageViewController = BookListPageViewController(
+            transitionStyle: .scroll,
+            navigationOrientation: .horizontal,
+            options: nil)
+        
+        let pageView = pageViewController.view!
 
-        
-        
-        
+        self.pageViewContainer.addSubview(pageViewController.view)
+        addChild(pageViewController)
+        pageView.translatesAutoresizingMaskIntoConstraints = false
+        pageView.leadingAnchor.constraint(equalTo: pageViewContainer.leadingAnchor).isActive = true
+        pageView.trailingAnchor.constraint(equalTo: pageViewContainer.trailingAnchor).isActive = true
+        pageView.topAnchor.constraint(equalTo: pageViewContainer.topAnchor).isActive = true
+        pageView.bottomAnchor.constraint(equalTo: pageViewContainer.bottomAnchor).isActive = true
+        pageViewController.didMove(toParent: self)
 
         let req = BookListGetRequest()
-        APIClient.shared.send(request: req) { result in
+        APIClient.shared.send(request: req) { [weak self] result in
             switch result {
             case .success(let response):
-                let bookList = BookListGetResponse.parse(from: response.value)
-                debugPrint(bookList)
+                if let self = self {
+                    self.bookList = BookListGetResponse.parse(from: response.value)
+                    self.pageViewController.setup(bookList: self.bookList)
+                    self.headerTabView.reloadData()
+                }
                 
             case .failure(let error):
                 debugPrint(error)
             }
         }
-        
     }
-    
-    @objc private func onTouchedRightButton(_ sender: AnyObject) {
-        
-    }
-    
 }
 
 extension BookListTopViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -83,7 +90,7 @@ extension BookListTopViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderTabCollectionCell", for: indexPath) as! HeaderTabCollectionCell
+        let cell = collectionView.dequeueReusableCell(HeaderTabCollectionCell.self, for: indexPath)
         
         cell.setup(label: tabItems[safe: indexPath.row] ?? "", isActive: indexPath.row == currentPageIndex)
         return cell
@@ -97,7 +104,7 @@ extension BookListTopViewController: UICollectionViewDataSource, UICollectionVie
     }
 }
 
-class HeaderTabCollectionCell: UICollectionViewCell {
+class HeaderTabCollectionCell: UICollectionViewCell, Nibable {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var underLine: UIView!
     
