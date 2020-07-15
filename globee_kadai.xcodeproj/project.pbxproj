@@ -45,6 +45,8 @@
 		5454AD5024BDEB39005E9E66 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD4E24BDEB39005E9E66 /* Realm.framework */; };
 		5454AD5324BE008E005E9E66 /* MyBookRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5224BE008E005E9E66 /* MyBookRecord.swift */; };
 		5454AD5524BE03E1005E9E66 /* MyBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */; };
+		5454AD5724BE3800005E9E66 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD5624BE3800005E9E66 /* PKHUD.framework */; };
+		5454AD5C24BE43BE005E9E66 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
@@ -111,6 +113,8 @@
 		5454AD4E24BDEB39005E9E66 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5454AD5224BE008E005E9E66 /* MyBookRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRecord.swift; sourceTree = "<group>"; };
 		5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRepository.swift; sourceTree = "<group>"; };
+		5454AD5624BE3800005E9E66 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
+		5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5454AD5724BE3800005E9E66 /* PKHUD.framework in Frameworks */,
 				5454AD5024BDEB39005E9E66 /* Realm.framework in Frameworks */,
 				5454AD4F24BDEB39005E9E66 /* RealmSwift.framework in Frameworks */,
 				540E8EE624AF136300CA4779 /* Alamofire.framework in Frameworks */,
@@ -177,6 +182,7 @@
 		540E8EE424AF136200CA4779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD5624BE3800005E9E66 /* PKHUD.framework */,
 				5454AD4E24BDEB39005E9E66 /* Realm.framework */,
 				5454AD4D24BDEB39005E9E66 /* RealmSwift.framework */,
 				5454AD2724BD90AB005E9E66 /* SDWebImage.framework */,
@@ -264,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */,
+				5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,6 +541,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
 			);
 			name = "Carthage copy-frameworks";
 			outputFileListPaths = (
@@ -544,6 +552,7 @@
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SDWebImage.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -569,6 +578,7 @@
 				54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */,
 				5454AD3924BDB163005E9E66 /* String+Extension.swift in Sources */,
 				540E8EE324AF129300CA4779 /* Collection+Extension.swift in Sources */,
+				5454AD5C24BE43BE005E9E66 /* ProgressHUD.swift in Sources */,
 				5454AD1B24BCD64A005E9E66 /* UICollectionView+Cell.swift in Sources */,
 				540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */,
 				5454AD1D24BCD64A005E9E66 /* Nibable.swift in Sources */,

@@ -2,3 +2,4 @@ github "Alamofire/Alamofire" ~> 5.2
 github "SwiftyJSON/SwiftyJSON" ~> 4.0
 github "SDWebImage/SDWebImage"
 github "realm/realm-cocoa"
+github "pkluz/PKHUD" ~> 5.0
