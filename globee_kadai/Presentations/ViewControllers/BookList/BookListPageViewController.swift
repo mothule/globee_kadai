@@ -10,7 +10,19 @@ import Foundation
 import UIKit
 
 
-class BookListPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class BookListPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    enum Notice: Notificationable {
+        case changedPage(Int)
+        var noticeName: String { "BookListPageViewControllerChangedPage" }
+        var noticeUserInfo: [AnyHashable : Any]? {
+            if case .changedPage(let index) = self {
+                return ["index": index]
+            }
+            return nil
+        }
+    }
+    
     private var bookCollection: BookCollection = .init() {
         didSet {
             pageContents = bookCollection.topCategorizedBookLineList.map { bookListViewController(bookList: $0) }
@@ -29,19 +41,14 @@ class BookListPageViewController: UIPageViewController, UIPageViewControllerData
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        delegate = self
     }
     
     func navigateViewControllerDirect(at nextIndex: Int, from beforeIndex: Int) {
         guard beforeIndex != nextIndex else { return }
         guard let vc = pageContents[safe: nextIndex] else { return }
         
-        let direction: NavigationDirection
-        if beforeIndex > nextIndex {
-            direction = .reverse
-        } else {
-            direction = .forward
-        }
-        
+        let direction: NavigationDirection = beforeIndex > nextIndex ? .reverse : .forward
         setViewControllers([vc], direction: direction, animated: true, completion: nil)
     }
     
@@ -51,6 +58,14 @@ class BookListPageViewController: UIPageViewController, UIPageViewControllerData
         return vc
     }
     
+    // MARK: - UIPageViewControllerDelegate
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let bookListViewController = pageViewController.viewControllers?.first as? BookListViewController else { return }
+        guard let index = pageContents.firstIndex(of: bookListViewController) else { return }
+        Notice.changedPage(index).post()
+    }
+
+
     // MARK: - UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let bookListViewController = viewController as? BookListViewController else { return nil }

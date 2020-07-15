@@ -60,6 +60,7 @@ class BookListTopViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         BookSubCategoryTableViewCell.Notice.selectBook(nil).addObserver(self, selector: #selector(onSelectedBook(_:)))
+        BookListPageViewController.Notice.changedPage(0).addObserver(self, selector: #selector(onChangedPage(_:)))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,6 +80,12 @@ class BookListTopViewController: UIViewController {
         let vc = BookDetailViewController.instance()
         vc.setup(book: book)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func onChangedPage(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let index = userInfo["index"] as? Int else { return }
+        currentPageIndex = index
     }
 }
 
