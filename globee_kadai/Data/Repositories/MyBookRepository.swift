@@ -25,48 +25,81 @@ protocol MyBookRepository {
 class MyBookRepositoryImpl: MyBookRepository {
     func add(with book: Book) -> EzTask<Void, MyBookError> {
         .init { (fulfill, reject) in
-            do {
-                let entity = MyBookRecord()
-                entity.identifier = book.nameBook
-                let realm = try Realm()
-                try realm.write {
-                    realm.add(entity)
+            self.inBackground {
+                do {
+                    let entity = MyBookRecord()
+                    entity.identifier = book.nameBook
+                    let realm = try Realm()
+                    try realm.write {
+                        realm.add(entity)
+                    }
+                    // 一瞬だけUIが出るのはUX上よろしくないため
+                    Thread.sleep(forTimeInterval: 0.3)
+                    self.inMain {
+                        fulfill(())
+                    }
+                } catch let error as NSError {
+                    self.inMain {
+                        reject(.addError(error))
+                    }
                 }
-                fulfill(())
-            } catch let error as NSError {
-                reject(.addError(error))
             }
         }
     }
     
     func remove(of book: Book) -> EzTask<Void, MyBookError> {
         .init { (fulfill, reject) in
-            do {
-                let realm = try Realm()
-                let result = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
-                try realm.write {
-                    realm.delete(result)
+            self.inBackground {
+                do {
+                    let realm = try Realm()
+                    let result = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
+                    try realm.write {
+                        realm.delete(result)
+                    }
+                    Thread.sleep(forTimeInterval: 0.3)
+                    self.inMain {
+                        fulfill(())
+                    }
+                } catch let error as NSError {
+                    self.inMain {
+                        reject(.removeError(error))
+                    }
                 }
-                fulfill(())
-            } catch let error as NSError {
-                reject(.removeError(error))
             }
         }
     }
     
     func fetch(with book: Book) -> EzTask<MyBookRecord, MyBookError> {
         .init { (fulfill, reject) in
-            do {
-                let realm = try Realm()
-                let results = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
-                if let result = results.first {
-                    fulfill(result)
-                } else {
-                    reject(.fetchNotFoundError)
+            self.inBackground {
+                do {
+                    let realm = try Realm()
+                    let results = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
+                    if let result = results.first {
+                        self.inMain { fulfill(result) }
+                    } else {
+                        self.inMain { reject(.fetchNotFoundError) }
+                    }
+                } catch let error as NSError {
+                    self.inMain {
+                        reject(.removeError(error))
+                    }
                 }
-            } catch let error as NSError {
-                reject(.removeError(error))
             }
+        }
+    }
+    
+    private func inBackground(process: @escaping (() -> Void)) {
+        DispatchQueue.global().async {
+            autoreleasepool {
+                process()
+            }
+        }
+    }
+    
+    private func inMain(process: @escaping (() -> Void)) {
+        DispatchQueue.main.async {
+            process()
         }
     }
 }

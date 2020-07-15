@@ -77,12 +77,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtB-3s-Mir">
-                                                    <rect key="frame" x="369" y="38" width="30" height="20"/>
+                                                    <rect key="frame" x="369" y="42" width="30" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6bV-RP-Qu5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="17"/>
-                                                    <state key="normal" title="＞"/>
+                                                    <state key="normal" title="＞">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -93,7 +95,7 @@
                                                 <constraint firstItem="g6u-rb-ihT" firstAttribute="leading" secondItem="LDO-Y8-MFz" secondAttribute="leading" id="YlR-ES-cCG"/>
                                                 <constraint firstAttribute="trailing" secondItem="qtB-3s-Mir" secondAttribute="trailing" constant="15" id="iFu-oV-6Wu"/>
                                                 <constraint firstAttribute="bottom" secondItem="g6u-rb-ihT" secondAttribute="bottom" id="odf-1v-60e"/>
-                                                <constraint firstItem="qtB-3s-Mir" firstAttribute="centerY" secondItem="rPk-nm-5RQ" secondAttribute="centerY" id="wti-mH-QKD"/>
+                                                <constraint firstItem="qtB-3s-Mir" firstAttribute="centerY" secondItem="rPk-nm-5RQ" secondAttribute="centerY" constant="4" id="wti-mH-QKD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

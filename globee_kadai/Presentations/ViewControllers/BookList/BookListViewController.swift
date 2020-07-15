@@ -11,8 +11,6 @@ import UIKit
 
 class BookListViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var tableView: UITableView!
-
-    // TODO: 型を用意する
     private var bookList: TopCategorizedBookLine? = nil {
         didSet {
             tableView?.reloadData()
@@ -42,13 +40,10 @@ extension BookListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(BookSubCategoryTableViewCell.self, for: indexPath)
-        
         if let subCategory = bookList?.subCategoryList[safe: indexPath.row] {
             cell.setup(with: subCategory)
         }
-        
         return cell
-        
     }
 }
 

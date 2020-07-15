@@ -11,24 +11,24 @@ import UIKit
 
 
 class BookListPageViewController: UIPageViewController, UIPageViewControllerDataSource {
-    
-    // TODO: 型を用意する
     private var bookCollection: BookCollection = .init() {
         didSet {
             pageContents = bookCollection.topCategorizedBookLineList.map { bookListViewController(bookList: $0) }
         }
     }
-//    private var bookList: [BookListGetResponse] = []
     private var pageContents: [BookListViewController] = []
     
     func setup(bookCollection: BookCollection) {
         self.bookCollection = bookCollection
-//        self.bookList = bookList
-//        pageContents = bookList.map { bookListViewController(bookList: $0) }
         setViewControllers([pageContents.first!],
                            direction: .forward,
                            animated: true,
                            completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dataSource = self
     }
     
     func navigateViewControllerDirect(at nextIndex: Int, from beforeIndex: Int) {
@@ -49,14 +49,6 @@ class BookListPageViewController: UIPageViewController, UIPageViewControllerData
         let vc = BookListViewController.instance()
         vc.setup(bookList: bookList)
         return vc
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dataSource = self
-        
-        // TODO: view.subviewsからUIScrollViewを見つけてdelegateをセットし、
-        // 一番左と右のスクロールをしようとしたらスクロール位置をクランプさせる
     }
     
     // MARK: - UIPageViewControllerDataSource

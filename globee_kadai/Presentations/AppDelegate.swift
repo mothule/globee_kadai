@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initializeSDWebImage()
+        initializeAppearances()
+        
         return true
     }
 
@@ -40,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = cache.config
         // 180 × 260 x 4(ARGB8888) = 187,200 bytes / image
         config.maxMemoryCost = (600 * 500) * 500 // 商品画像500枚程度
+    }
+    
+    private func initializeAppearances() {
+        UINavigationBar.appearance().tintColor = Theme.color.secondary
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 8, vertical: 0), for: .default)
     }
 }
 

@@ -13,7 +13,6 @@ class BookListTopViewController: UIViewController {
     @IBOutlet private weak var headerTabView: UICollectionView!
     @IBOutlet private weak var pageViewContainer: UIView!
     private var pageViewController: BookListPageViewController!
-    // TODO: モデル用意
     private var repository: BookCollectionRepository = BookCollectionRepositoryImpl()
     private var bookCollection: BookCollection = .init() {
         didSet {
@@ -112,19 +111,5 @@ extension BookListTopViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         currentPageIndex = indexPath.row
-    }
-}
-
-class HeaderTabCollectionCell: UICollectionViewCell, Nibable {
-    @IBOutlet private weak var label: UILabel!
-    @IBOutlet private weak var underLine: UIView!
-        
-    func setup(label: String?, isActive: Bool) {
-        self.label.text = label.orEmpty
-        self.label.textColor = isActive ? #colorLiteral(red: 0.9628371596, green: 0.03040463105, blue: 0.4038784206, alpha: 1) : #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-
-        self.underLine.layer.cornerRadius = 4
-        self.underLine.isShown = isActive
-        self.underLine.backgroundColor = #colorLiteral(red: 0.9628371596, green: 0.03040463105, blue: 0.4038784206, alpha: 1)
     }
 }

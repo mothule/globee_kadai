@@ -47,6 +47,9 @@
 		5454AD5524BE03E1005E9E66 /* MyBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */; };
 		5454AD5724BE3800005E9E66 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454AD5624BE3800005E9E66 /* PKHUD.framework */; };
 		5454AD5C24BE43BE005E9E66 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */; };
+		5454AD5E24BEAA95005E9E66 /* HeaderTabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD5D24BEAA95005E9E66 /* HeaderTabCollectionCell.swift */; };
+		5454AD6224BEB6C7005E9E66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454AD6124BEB6C7005E9E66 /* Theme.swift */; };
+		5454AD6424BEB8A6005E9E66 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5454AD6324BEB8A6005E9E66 /* Colors.xcassets */; };
 		54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BDE24AF0D23005E59E2 /* AppDelegate.swift */; };
 		54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE024AF0D23005E59E2 /* SceneDelegate.swift */; };
 		54604BE324AF0D23005E59E2 /* BookListTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BE224AF0D23005E59E2 /* BookListTopViewController.swift */; };
@@ -115,6 +118,9 @@
 		5454AD5424BE03E1005E9E66 /* MyBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRepository.swift; sourceTree = "<group>"; };
 		5454AD5624BE3800005E9E66 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
 		5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		5454AD5D24BEAA95005E9E66 /* HeaderTabCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabCollectionCell.swift; sourceTree = "<group>"; };
+		5454AD6124BEB6C7005E9E66 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5454AD6324BEB8A6005E9E66 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		54604BDB24AF0D23005E59E2 /* globee_kadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globee_kadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604BDE24AF0D23005E59E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54604BE024AF0D23005E59E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 			children = (
 				5454AD4B24BDC3AC005E9E66 /* BookImageView.swift */,
 				5454AD5B24BE43BE005E9E66 /* ProgressHUD.swift */,
+				5454AD5D24BEAA95005E9E66 /* HeaderTabCollectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +288,23 @@
 				5454AD5224BE008E005E9E66 /* MyBookRecord.swift */,
 			);
 			path = Databases;
+			sourceTree = "<group>";
+		};
+		5454AD5F24BEB1DD005E9E66 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				54604C1124AF0EFC005E59E2 /* BookList */,
+				54604C1224AF0F00005E59E2 /* BookDetail */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5454AD6024BEB6BC005E9E66 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5454AD6124BEB6C7005E9E66 /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		54604BD224AF0D23005E59E2 = {
@@ -312,6 +336,7 @@
 				540E8EEE24AF263100CA4779 /* Models */,
 				54604C0E24AF0E76005E59E2 /* Data */,
 				54604BE724AF0D25005E59E2 /* Assets.xcassets */,
+				5454AD6324BEB8A6005E9E66 /* Colors.xcassets */,
 				54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */,
 				54604BEC24AF0D25005E59E2 /* Info.plist */,
 			);
@@ -368,9 +393,9 @@
 		54604C1024AF0EA0005E59E2 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				5454AD6024BEB6BC005E9E66 /* Theme */,
+				5454AD5F24BEB1DD005E9E66 /* ViewControllers */,
 				5454AD4A24BDC393005E9E66 /* Views */,
-				54604C1124AF0EFC005E59E2 /* BookList */,
-				54604C1224AF0F00005E59E2 /* BookDetail */,
 				54604BDE24AF0D23005E59E2 /* AppDelegate.swift */,
 				54604BE024AF0D23005E59E2 /* SceneDelegate.swift */,
 			);
@@ -506,6 +531,7 @@
 				540E8F0124B363C600CA4779 /* BookListTopViewController.storyboard in Resources */,
 				54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */,
 				54604BE824AF0D25005E59E2 /* Assets.xcassets in Resources */,
+				5454AD6424BEB8A6005E9E66 /* Colors.xcassets in Resources */,
 				5454AD4624BDB9E1005E9E66 /* BookDetailViewController.storyboard in Resources */,
 				540E8EFF24B258AA00CA4779 /* BookListViewController.storyboard in Resources */,
 			);
@@ -590,6 +616,7 @@
 				5454AD4124BDB418005E9E66 /* Book.swift in Sources */,
 				5454AD1A24BCD64A005E9E66 /* UITableView+Cell.swift in Sources */,
 				540E8EF924AF452C00CA4779 /* BookDetailViewController.swift in Sources */,
+				5454AD6224BEB6C7005E9E66 /* Theme.swift in Sources */,
 				5454AD3424BDA500005E9E66 /* NSNumber+String.swift in Sources */,
 				5454AD4C24BDC3AC005E9E66 /* BookImageView.swift in Sources */,
 				540E8EF024AF27D200CA4779 /* BookListGetRequest.swift in Sources */,
@@ -597,6 +624,7 @@
 				540E8EEB24AF190D00CA4779 /* APIClient.swift in Sources */,
 				540E8EF524AF2B5D00CA4779 /* TimeZone+Extension.swift in Sources */,
 				5454AD3024BDA44A005E9E66 /* MemoryCache.swift in Sources */,
+				5454AD5E24BEAA95005E9E66 /* HeaderTabCollectionCell.swift in Sources */,
 				5454AD2324BD8E55005E9E66 /* SDWebImage+Extension.swift in Sources */,
 				5454AD4424BDB599005E9E66 /* Notificationable.swift in Sources */,
 				54604BE124AF0D23005E59E2 /* SceneDelegate.swift in Sources */,

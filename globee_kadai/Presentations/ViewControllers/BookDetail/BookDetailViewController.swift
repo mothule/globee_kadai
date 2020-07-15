@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class BookDetailViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var bookImageView: BookImageView!
@@ -31,49 +32,54 @@ class BookDetailViewController: UIViewController, Storyboardable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = "書籍紹介"
+
         bookImageView.setup(with: book.imageUrl)
         
         bookTitleLabel.attributedText = book.nameBook.decorate(by: [.lineHeight(bookTitleLabel.font.pointSize * 1.4)])
         authorLabel.text = "著者：" + book.author
         publisherLabel.text = "出版社：" + book.publisher
-        isAddedMyBook = false
-//        updateAddedMyBookButton(isAddedMyBook: false)
 
         purchaseButton.layer.cornerRadius = 4.0
-        purchaseButton.backgroundColor = UIColor.systemPink
+        purchaseButton.backgroundColor = Theme.color.accent
         purchaseButton.setTitleColor(.white, for: .normal)
         purchaseButton.setTitle("購入", for: .normal)
 
-        navigationController?.navigationBar.topItem!.title = "書籍紹介"
+        isAddedMyBook = false
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "データ削除", style: .plain, target: self, action: #selector(onTouchedDeleteDataOnNavBar(_:)))
+        let deleteButton = UIBarButtonItem(title: "データ削除", style: .plain, target: self, action: #selector(onTouchedDeleteDataOnNavBar(_:)))
+        deleteButton.tintColor = Theme.color.accent
+        navigationItem.rightBarButtonItem = deleteButton
         
-        repository.fetch(with: book).onSuccess({ _ in
-            self.isAddedMyBook = true
-        }).onFailure({ error in
+        repository.fetch(with: book).onSuccess({ [weak self] _ in
+            self?.isAddedMyBook = true
+        }).onFailure({ [weak self] error in
             if case .fetchNotFoundError = error {
-                self.isAddedMyBook = false
+                self?.isAddedMyBook = false
             }
         })
     }
     
     @IBAction func onTouchedAddMyBooksButton(_ sender: Any) {
-        // プログレス表示
-        print(#function)
+        ProgressHUD.show()
         
         if isAddedMyBook {
             repository.remove(of: book).onSuccess({ [weak self] _ in
                 self?.showAlert(message: "MyBookから削除しました。")
                 self?.isAddedMyBook = false
+                ProgressHUD.hide()
             }).onFailure({ error in
                 self.showAlert(message: "MyBookからの削除に失敗しました。")
+                ProgressHUD.hide()
             })
         } else {
             repository.add(with: book).onSuccess({ [weak self] _ in
                 self?.showAlert(message: "MyBookへ追加しました。")
                 self?.isAddedMyBook = true
+                ProgressHUD.hide()
             }).onFailure({ error in
                 self.showAlert(message: "MyBookへの追加に失敗しました。")
+                ProgressHUD.hide()
             })
         }
     }
@@ -102,20 +108,20 @@ class BookDetailViewController: UIViewController, Storyboardable {
         defer {
             UIView.setAnimationsEnabled(true)
         }
+        let color: UIColor
+        let title: String
         if isAddedMyBook {
-            addMyBookButton.setTitle("MyBooksから外す", for: .normal)
-            addMyBookButton.layer.borderWidth = 1
-            let color = UIColor.lightGray
-            addMyBookButton.layer.borderColor = color.cgColor
-            addMyBookButton.setTitleColor(color, for: .normal)
-            addMyBookButton.layer.cornerRadius = 4.0
+            title = "MyBooksから外す"
+            color = Theme.color.secondary
         } else {
-            addMyBookButton.setTitle("MyBooks追加", for: .normal)
-            addMyBookButton.layer.borderWidth = 1
-            let color = UIColor.systemPink
-            addMyBookButton.layer.borderColor = color.cgColor
-            addMyBookButton.setTitleColor(color, for: .normal)
-            addMyBookButton.layer.cornerRadius = 4.0
+            title = "MyBooks追加"
+            color = Theme.color.accent
         }
+        addMyBookButton.setTitle(title, for: .normal)
+        addMyBookButton.layer.borderWidth = 1
+        addMyBookButton.layer.borderColor = color.cgColor
+        addMyBookButton.setTitleColor(color, for: .normal)
+        addMyBookButton.layer.cornerRadius = 4.0
+        addMyBookButton.layoutIfNeeded()
     }
 }
