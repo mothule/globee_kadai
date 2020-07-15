@@ -28,7 +28,7 @@ class MyBookRepositoryImpl: MyBookRepository {
             self.inBackground {
                 do {
                     let entity = MyBookRecord()
-                    entity.identifier = book.nameBook
+                    entity.identifier = book.idBook
                     let realm = try Realm()
                     try realm.write {
                         realm.add(entity)
@@ -52,7 +52,7 @@ class MyBookRepositoryImpl: MyBookRepository {
             self.inBackground {
                 do {
                     let realm = try Realm()
-                    let result = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
+                    let result = realm.objects(MyBookRecord.self).filter("identifier == '\(book.idBook)'")
                     try realm.write {
                         realm.delete(result)
                     }
@@ -74,7 +74,7 @@ class MyBookRepositoryImpl: MyBookRepository {
             self.inBackground {
                 do {
                     let realm = try Realm()
-                    let results = realm.objects(MyBookRecord.self).filter("identifier == '\(book.nameBook)'")
+                    let results = realm.objects(MyBookRecord.self).filter("identifier == '\(book.idBook)'")
                     if let result = results.first {
                         self.inMain { fulfill(result) }
                     } else {
