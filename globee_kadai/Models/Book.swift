@@ -22,7 +22,7 @@ struct Book {
 
     init(from json: JSON) {
         author = json["author"].stringValue
-        createdAt = json["created_at"].stringValue
+        createdAt = json["create_at"].stringValue
         hasContents = json["has_contents"].intValue > 0
         hasPurchased = json["has_purchased"].boolValue
         idBook = json["id_book"].stringValue
