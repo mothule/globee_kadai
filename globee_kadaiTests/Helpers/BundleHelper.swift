@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Hoge {}
+private class Hoge {}
 func loadJSON(_ fileName: String) -> JSON? {
     let bundle = Bundle(for: Hoge.self)
     let path = bundle.path(forResource: fileName, ofType: "json")

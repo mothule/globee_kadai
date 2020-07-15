@@ -12,7 +12,6 @@
 		540E8EEB24AF190D00CA4779 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EEA24AF190D00CA4779 /* APIClient.swift */; };
 		540E8EED24AF1B0F00CA4779 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540E8EEC24AF1B0F00CA4779 /* SwiftyJSON.framework */; };
 		540E8EF024AF27D200CA4779 /* BookListGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EEF24AF27D200CA4779 /* BookListGetRequest.swift */; };
-		540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF224AF2AFB00CA4779 /* JSONSwifty+Date.swift */; };
 		540E8EF524AF2B5D00CA4779 /* TimeZone+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF424AF2B5D00CA4779 /* TimeZone+Extension.swift */; };
 		540E8EF724AF2D4500CA4779 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF624AF2D4500CA4779 /* String+Date.swift */; };
 		540E8EF924AF452C00CA4779 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E8EF824AF452C00CA4779 /* BookDetailViewController.swift */; };
@@ -60,6 +59,28 @@
 		54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BF524AF0D25005E59E2 /* globee_kadaiTests.swift */; };
 		54604C0124AF0D25005E59E2 /* globee_kadaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */; };
 		54A7965624BEF5C700DC4176 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7965524BEF5C700DC4176 /* Locale+Extension.swift */; };
+		54A7965E24BF3C3700DC4176 /* EzTaskSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7965924BF3C3700DC4176 /* EzTaskSpec.swift */; };
+		54A7966024BF3C3700DC4176 /* MemoryCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7965C24BF3C3700DC4176 /* MemoryCacheSpec.swift */; };
+		54A7966324BF3C6400DC4176 /* NotificationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966224BF3C6400DC4176 /* NotificationSpec.swift */; };
+		54A7966B24BF3CB900DC4176 /* CollectionExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966524BF3CB900DC4176 /* CollectionExtensionSpec.swift */; };
+		54A7966C24BF3CB900DC4176 /* Int+ExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966624BF3CB900DC4176 /* Int+ExtensionSpec.swift */; };
+		54A7966D24BF3CB900DC4176 /* NSNumber+ExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966724BF3CB900DC4176 /* NSNumber+ExtensionSpec.swift */; };
+		54A7966E24BF3CB900DC4176 /* NSObjectProtocolClassNameSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966824BF3CB900DC4176 /* NSObjectProtocolClassNameSpec.swift */; };
+		54A7966F24BF3CB900DC4176 /* String+ExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966924BF3CB900DC4176 /* String+ExtensionSpec.swift */; };
+		54A7967024BF3CB900DC4176 /* StringDateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7966A24BF3CB900DC4176 /* StringDateSpec.swift */; };
+		54A7967624BF3CD500DC4176 /* UITableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967124BF3CD500DC4176 /* UITableViewCellSpec.swift */; };
+		54A7967724BF3CD500DC4176 /* UICollectionViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967224BF3CD500DC4176 /* UICollectionViewCellSpec.swift */; };
+		54A7967824BF3CD500DC4176 /* StoryboardableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967324BF3CD500DC4176 /* StoryboardableSpec.swift */; };
+		54A7967924BF3CD500DC4176 /* UIViewExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967424BF3CD500DC4176 /* UIViewExtensionSpec.swift */; };
+		54A7967A24BF3CD500DC4176 /* NibableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967524BF3CD500DC4176 /* NibableSpec.swift */; };
+		54A7967D24BF3E1F00DC4176 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967C24BF3E1F00DC4176 /* Date+String.swift */; };
+		54A7967F24BF3E3700DC4176 /* DateStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967E24BF3E3700DC4176 /* DateStringSpec.swift */; };
+		54A7968124BF3E6200DC4176 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7968024BF3E6200DC4176 /* Dictionary+Extension.swift */; };
+		54A7968324BF3E7200DC4176 /* DictionaryExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7968224BF3E7200DC4176 /* DictionaryExtensionSpec.swift */; };
+		54A7968924BF3F4A00DC4176 /* FugaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7968524BF3F4A00DC4176 /* FugaTableViewCell.xib */; };
+		54A7968A24BF3F4A00DC4176 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7968624BF3F4A00DC4176 /* CollectionHeaderView.xib */; };
+		54A7968B24BF3F4A00DC4176 /* FugaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7968724BF3F4A00DC4176 /* FugaCollectionViewCell.xib */; };
+		54A7968C24BF3F4A00DC4176 /* HogeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A7968824BF3F4A00DC4176 /* HogeViewController.storyboard */; };
 		54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B74C7724B4F78200F6640D /* BookListPageViewController.swift */; };
 		54F6420724BEDD830033580A /* book_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F6420624BEDD830033580A /* book_all.json */; };
 		54F6420A24BEDE310033580A /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6420924BEDE310033580A /* BundleHelper.swift */; };
@@ -96,7 +117,6 @@
 		540E8EEA24AF190D00CA4779 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		540E8EEC24AF1B0F00CA4779 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		540E8EEF24AF27D200CA4779 /* BookListGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListGetRequest.swift; sourceTree = "<group>"; };
-		540E8EF224AF2AFB00CA4779 /* JSONSwifty+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONSwifty+Date.swift"; sourceTree = "<group>"; };
 		540E8EF424AF2B5D00CA4779 /* TimeZone+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Extension.swift"; sourceTree = "<group>"; };
 		540E8EF624AF2D4500CA4779 /* String+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		540E8EF824AF452C00CA4779 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +170,28 @@
 		54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globee_kadaiUITests.swift; sourceTree = "<group>"; };
 		54604C0224AF0D25005E59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54A7965524BEF5C700DC4176 /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
+		54A7965924BF3C3700DC4176 /* EzTaskSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzTaskSpec.swift; sourceTree = "<group>"; };
+		54A7965C24BF3C3700DC4176 /* MemoryCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheSpec.swift; sourceTree = "<group>"; };
+		54A7966224BF3C6400DC4176 /* NotificationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSpec.swift; sourceTree = "<group>"; };
+		54A7966524BF3CB900DC4176 /* CollectionExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtensionSpec.swift; sourceTree = "<group>"; };
+		54A7966624BF3CB900DC4176 /* Int+ExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ExtensionSpec.swift"; sourceTree = "<group>"; };
+		54A7966724BF3CB900DC4176 /* NSNumber+ExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+ExtensionSpec.swift"; sourceTree = "<group>"; };
+		54A7966824BF3CB900DC4176 /* NSObjectProtocolClassNameSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolClassNameSpec.swift; sourceTree = "<group>"; };
+		54A7966924BF3CB900DC4176 /* String+ExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ExtensionSpec.swift"; sourceTree = "<group>"; };
+		54A7966A24BF3CB900DC4176 /* StringDateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDateSpec.swift; sourceTree = "<group>"; };
+		54A7967124BF3CD500DC4176 /* UITableViewCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellSpec.swift; sourceTree = "<group>"; };
+		54A7967224BF3CD500DC4176 /* UICollectionViewCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellSpec.swift; sourceTree = "<group>"; };
+		54A7967324BF3CD500DC4176 /* StoryboardableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardableSpec.swift; sourceTree = "<group>"; };
+		54A7967424BF3CD500DC4176 /* UIViewExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionSpec.swift; sourceTree = "<group>"; };
+		54A7967524BF3CD500DC4176 /* NibableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibableSpec.swift; sourceTree = "<group>"; };
+		54A7967C24BF3E1F00DC4176 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		54A7967E24BF3E3700DC4176 /* DateStringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateStringSpec.swift; sourceTree = "<group>"; };
+		54A7968024BF3E6200DC4176 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		54A7968224BF3E7200DC4176 /* DictionaryExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionSpec.swift; sourceTree = "<group>"; };
+		54A7968524BF3F4A00DC4176 /* FugaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FugaTableViewCell.xib; sourceTree = "<group>"; };
+		54A7968624BF3F4A00DC4176 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		54A7968724BF3F4A00DC4176 /* FugaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FugaCollectionViewCell.xib; sourceTree = "<group>"; };
+		54A7968824BF3F4A00DC4176 /* HogeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HogeViewController.storyboard; sourceTree = "<group>"; };
 		54B74C7724B4F78200F6640D /* BookListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPageViewController.swift; sourceTree = "<group>"; };
 		54F6420624BEDD830033580A /* book_all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book_all.json; sourceTree = "<group>"; };
 		54F6420924BEDE310033580A /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
@@ -257,8 +299,10 @@
 				54A7965524BEF5C700DC4176 /* Locale+Extension.swift */,
 				540E8EF424AF2B5D00CA4779 /* TimeZone+Extension.swift */,
 				540E8EF624AF2D4500CA4779 /* String+Date.swift */,
+				54A7968024BF3E6200DC4176 /* Dictionary+Extension.swift */,
 				5454AD3324BDA500005E9E66 /* NSNumber+String.swift */,
 				5454AD3824BDB163005E9E66 /* String+Extension.swift */,
+				54A7967C24BF3E1F00DC4176 /* Date+String.swift */,
 				540E8EE224AF129300CA4779 /* Collection+Extension.swift */,
 				5454AD3124BDA4E4005E9E66 /* Int+Extension.swift */,
 				5454AD2024BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift */,
@@ -400,6 +444,8 @@
 		54604BF424AF0D25005E59E2 /* globee_kadaiTests */ = {
 			isa = PBXGroup;
 			children = (
+				54A7968424BF3F4A00DC4176 /* Data */,
+				54A7965724BF3C2A00DC4176 /* Libraries */,
 				54F6420824BEDE1A0033580A /* Helpers */,
 				5454AD6B24BEDCAE005E9E66 /* Mocks */,
 				54F6421524BEE6EF0033580A /* ViewControllers */,
@@ -439,7 +485,6 @@
 				5454AD1F24BCD67F005E9E66 /* Foundation+Extensions */,
 				5454AD1124BCD64A005E9E66 /* UIKit+Extensions */,
 				5454AD2224BD8E55005E9E66 /* SDWebImage+Extension.swift */,
-				540E8EF224AF2AFB00CA4779 /* JSONSwifty+Date.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -476,6 +521,81 @@
 				5454AD4524BDB9E1005E9E66 /* BookDetailViewController.storyboard */,
 			);
 			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		54A7965724BF3C2A00DC4176 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				54A7967B24BF3CDB00DC4176 /* UIKit+Extensions */,
+				54A7966424BF3C9700DC4176 /* Foundation+Extensions */,
+				54A7966124BF3C6400DC4176 /* Notificationable */,
+				54A7965A24BF3C3700DC4176 /* Cache */,
+				54A7965824BF3C3700DC4176 /* EzTask */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		54A7965824BF3C3700DC4176 /* EzTask */ = {
+			isa = PBXGroup;
+			children = (
+				54A7965924BF3C3700DC4176 /* EzTaskSpec.swift */,
+			);
+			path = EzTask;
+			sourceTree = "<group>";
+		};
+		54A7965A24BF3C3700DC4176 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				54A7965C24BF3C3700DC4176 /* MemoryCacheSpec.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		54A7966124BF3C6400DC4176 /* Notificationable */ = {
+			isa = PBXGroup;
+			children = (
+				54A7966224BF3C6400DC4176 /* NotificationSpec.swift */,
+			);
+			path = Notificationable;
+			sourceTree = "<group>";
+		};
+		54A7966424BF3C9700DC4176 /* Foundation+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54A7966724BF3CB900DC4176 /* NSNumber+ExtensionSpec.swift */,
+				54A7966924BF3CB900DC4176 /* String+ExtensionSpec.swift */,
+				54A7967E24BF3E3700DC4176 /* DateStringSpec.swift */,
+				54A7968224BF3E7200DC4176 /* DictionaryExtensionSpec.swift */,
+				54A7966A24BF3CB900DC4176 /* StringDateSpec.swift */,
+				54A7966524BF3CB900DC4176 /* CollectionExtensionSpec.swift */,
+				54A7966624BF3CB900DC4176 /* Int+ExtensionSpec.swift */,
+				54A7966824BF3CB900DC4176 /* NSObjectProtocolClassNameSpec.swift */,
+			);
+			path = "Foundation+Extensions";
+			sourceTree = "<group>";
+		};
+		54A7967B24BF3CDB00DC4176 /* UIKit+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54A7967524BF3CD500DC4176 /* NibableSpec.swift */,
+				54A7967324BF3CD500DC4176 /* StoryboardableSpec.swift */,
+				54A7967224BF3CD500DC4176 /* UICollectionViewCellSpec.swift */,
+				54A7967124BF3CD500DC4176 /* UITableViewCellSpec.swift */,
+				54A7967424BF3CD500DC4176 /* UIViewExtensionSpec.swift */,
+			);
+			path = "UIKit+Extensions";
+			sourceTree = "<group>";
+		};
+		54A7968424BF3F4A00DC4176 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				54A7968524BF3F4A00DC4176 /* FugaTableViewCell.xib */,
+				54A7968624BF3F4A00DC4176 /* CollectionHeaderView.xib */,
+				54A7968724BF3F4A00DC4176 /* FugaCollectionViewCell.xib */,
+				54A7968824BF3F4A00DC4176 /* HogeViewController.storyboard */,
+			);
+			name = Data;
+			path = "../../nice-rearing/nice-rearingTests/Data";
 			sourceTree = "<group>";
 		};
 		54F6420824BEDE1A0033580A /* Helpers */ = {
@@ -623,7 +743,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A7968924BF3F4A00DC4176 /* FugaTableViewCell.xib in Resources */,
+				54A7968B24BF3F4A00DC4176 /* FugaCollectionViewCell.xib in Resources */,
+				54A7968C24BF3F4A00DC4176 /* HogeViewController.storyboard in Resources */,
 				54F6420724BEDD830033580A /* book_all.json in Resources */,
+				54A7968A24BF3F4A00DC4176 /* CollectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +823,7 @@
 				5454AD2D24BDA100005E9E66 /* BookCollectionRepository.swift in Sources */,
 				5454AD4924BDBF4D005E9E66 /* AttributedStringDecorator.swift in Sources */,
 				5454AD3724BDA596005E9E66 /* EzTask.swift in Sources */,
+				54A7968124BF3E6200DC4176 /* Dictionary+Extension.swift in Sources */,
 				5454AD2124BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift in Sources */,
 				5454AD5324BE008E005E9E66 /* MyBookRecord.swift in Sources */,
 				540E8EFB24AF70C100CA4779 /* UIView+Extension.swift in Sources */,
@@ -711,7 +836,6 @@
 				540E8EE324AF129300CA4779 /* Collection+Extension.swift in Sources */,
 				5454AD5C24BE43BE005E9E66 /* ProgressHUD.swift in Sources */,
 				5454AD1B24BCD64A005E9E66 /* UICollectionView+Cell.swift in Sources */,
-				540E8EF324AF2AFB00CA4779 /* JSONSwifty+Date.swift in Sources */,
 				5454AD1D24BCD64A005E9E66 /* Nibable.swift in Sources */,
 				54604BDF24AF0D23005E59E2 /* AppDelegate.swift in Sources */,
 				5454AD3D24BDB3D6005E9E66 /* TopCategorizedBookLine.swift in Sources */,
@@ -724,6 +848,7 @@
 				5454AD6224BEB6C7005E9E66 /* Theme.swift in Sources */,
 				5454AD3424BDA500005E9E66 /* NSNumber+String.swift in Sources */,
 				5454AD4C24BDC3AC005E9E66 /* BookImageView.swift in Sources */,
+				54A7967D24BF3E1F00DC4176 /* Date+String.swift in Sources */,
 				540E8EF024AF27D200CA4779 /* BookListGetRequest.swift in Sources */,
 				540E8EF724AF2D4500CA4779 /* String+Date.swift in Sources */,
 				540E8EEB24AF190D00CA4779 /* APIClient.swift in Sources */,
@@ -742,15 +867,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A7966C24BF3CB900DC4176 /* Int+ExtensionSpec.swift in Sources */,
+				54A7967724BF3CD500DC4176 /* UICollectionViewCellSpec.swift in Sources */,
 				54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */,
 				54F6421824BEE7110033580A /* BookDetailPresenterSpec.swift in Sources */,
+				54A7967F24BF3E3700DC4176 /* DateStringSpec.swift in Sources */,
+				54A7966D24BF3CB900DC4176 /* NSNumber+ExtensionSpec.swift in Sources */,
 				54F6421A24BEE7A20033580A /* MockVerifyable.swift in Sources */,
 				54F6421C24BEE8050033580A /* UIViewControllerMock.swift in Sources */,
+				54A7966F24BF3CB900DC4176 /* String+ExtensionSpec.swift in Sources */,
 				54F6421024BEE10B0033580A /* BookCollectionSpec.swift in Sources */,
+				54A7966B24BF3CB900DC4176 /* CollectionExtensionSpec.swift in Sources */,
+				54A7966E24BF3CB900DC4176 /* NSObjectProtocolClassNameSpec.swift in Sources */,
 				54F6421424BEE3B30033580A /* SubCategorizedBookLineSpec.swift in Sources */,
+				54A7967824BF3CD500DC4176 /* StoryboardableSpec.swift in Sources */,
+				54A7965E24BF3C3700DC4176 /* EzTaskSpec.swift in Sources */,
+				54A7966024BF3C3700DC4176 /* MemoryCacheSpec.swift in Sources */,
 				54F6420A24BEDE310033580A /* BundleHelper.swift in Sources */,
+				54A7967924BF3CD500DC4176 /* UIViewExtensionSpec.swift in Sources */,
 				54F6421224BEE2CD0033580A /* TopCategorizedBookLineSpec.swift in Sources */,
+				54A7967624BF3CD500DC4176 /* UITableViewCellSpec.swift in Sources */,
+				54A7967A24BF3CD500DC4176 /* NibableSpec.swift in Sources */,
+				54A7968324BF3E7200DC4176 /* DictionaryExtensionSpec.swift in Sources */,
+				54A7967024BF3CB900DC4176 /* StringDateSpec.swift in Sources */,
 				5454AD6A24BEDC97005E9E66 /* BookSpec.swift in Sources */,
+				54A7966324BF3C6400DC4176 /* NotificationSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
