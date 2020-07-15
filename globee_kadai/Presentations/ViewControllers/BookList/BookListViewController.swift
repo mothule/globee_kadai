@@ -27,9 +27,10 @@ class BookListViewController: UIViewController, Storyboardable {
     }
 }
 
-extension BookListViewController: UITableViewDataSource {
+extension BookListViewController: UITableViewDataSource, UITableViewDelegate {
     private func initializeTable() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = 240.0
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -44,6 +45,10 @@ extension BookListViewController: UITableViewDataSource {
             cell.setup(with: subCategory)
         }
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        false
     }
 }
 
