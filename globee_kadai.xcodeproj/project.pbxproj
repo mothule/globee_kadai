@@ -77,6 +77,11 @@
 		54A7967F24BF3E3700DC4176 /* DateStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7967E24BF3E3700DC4176 /* DateStringSpec.swift */; };
 		54A7968124BF3E6200DC4176 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7968024BF3E6200DC4176 /* Dictionary+Extension.swift */; };
 		54A7968324BF3E7200DC4176 /* DictionaryExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7968224BF3E7200DC4176 /* DictionaryExtensionSpec.swift */; };
+		54A7969524BF444900DC4176 /* MyBookRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7969424BF444900DC4176 /* MyBookRepositorySpec.swift */; };
+		54A7969624BF4ECA00DC4176 /* FugaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7969324BF441400DC4176 /* FugaTableViewCell.xib */; };
+		54A7969724BF4ECA00DC4176 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7969124BF441400DC4176 /* CollectionHeaderView.xib */; };
+		54A7969824BF4ECA00DC4176 /* FugaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7969224BF441400DC4176 /* FugaCollectionViewCell.xib */; };
+		54A7969924BF4ECA00DC4176 /* HogeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A7969024BF441400DC4176 /* HogeViewController.storyboard */; };
 		54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B74C7724B4F78200F6640D /* BookListPageViewController.swift */; };
 		54F6420724BEDD830033580A /* book_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F6420624BEDD830033580A /* book_all.json */; };
 		54F6420A24BEDE310033580A /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6420924BEDE310033580A /* BundleHelper.swift */; };
@@ -188,6 +193,7 @@
 		54A7969124BF441400DC4176 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		54A7969224BF441400DC4176 /* FugaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FugaCollectionViewCell.xib; sourceTree = "<group>"; };
 		54A7969324BF441400DC4176 /* FugaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FugaTableViewCell.xib; sourceTree = "<group>"; };
+		54A7969424BF444900DC4176 /* MyBookRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRepositorySpec.swift; sourceTree = "<group>"; };
 		54B74C7724B4F78200F6640D /* BookListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPageViewController.swift; sourceTree = "<group>"; };
 		54F6420624BEDD830033580A /* book_all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book_all.json; sourceTree = "<group>"; };
 		54F6420924BEDE310033580A /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
@@ -586,6 +592,7 @@
 		54A7968424BF3F4A00DC4176 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				54A7969424BF444900DC4176 /* MyBookRepositorySpec.swift */,
 			);
 			name = Data;
 			path = "../../nice-rearing/nice-rearingTests/Data";
@@ -747,7 +754,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A7969624BF4ECA00DC4176 /* FugaTableViewCell.xib in Resources */,
+				54A7969824BF4ECA00DC4176 /* FugaCollectionViewCell.xib in Resources */,
+				54A7969924BF4ECA00DC4176 /* HogeViewController.storyboard in Resources */,
 				54F6420724BEDD830033580A /* book_all.json in Resources */,
+				54A7969724BF4ECA00DC4176 /* CollectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,6 +903,7 @@
 				54A7967024BF3CB900DC4176 /* StringDateSpec.swift in Sources */,
 				5454AD6A24BEDC97005E9E66 /* BookSpec.swift in Sources */,
 				54A7966324BF3C6400DC4176 /* NotificationSpec.swift in Sources */,
+				54A7969524BF444900DC4176 /* MyBookRepositorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
