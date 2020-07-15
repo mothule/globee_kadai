@@ -9,11 +9,11 @@
 import Foundation
 
 extension String {
-    func toDate(format: String, timeZone: TimeZone = .tokyo) -> Date? {
+    func toDate(format: String, timeZone: TimeZone = .current) -> Date? {
         let fmt = DateFormatter()
+        fmt.locale = .enUsPosix
+        fmt.timeZone = timeZone
         fmt.dateFormat = format
-        fmt.locale = Locale(identifier: "en_US_POSIX")
-        fmt.timeZone = .current
         return fmt.date(from: self)
     }
 }

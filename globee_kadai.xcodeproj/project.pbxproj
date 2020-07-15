@@ -59,6 +59,7 @@
 		54604BEB24AF0D25005E59E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54604BE924AF0D25005E59E2 /* LaunchScreen.storyboard */; };
 		54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604BF524AF0D25005E59E2 /* globee_kadaiTests.swift */; };
 		54604C0124AF0D25005E59E2 /* globee_kadaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */; };
+		54A7965624BEF5C700DC4176 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7965524BEF5C700DC4176 /* Locale+Extension.swift */; };
 		54B74C7824B4F78200F6640D /* BookListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B74C7724B4F78200F6640D /* BookListPageViewController.swift */; };
 		54F6420724BEDD830033580A /* book_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F6420624BEDD830033580A /* book_all.json */; };
 		54F6420A24BEDE310033580A /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6420924BEDE310033580A /* BundleHelper.swift */; };
@@ -148,6 +149,7 @@
 		54604BFC24AF0D25005E59E2 /* globee_kadaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = globee_kadaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54604C0024AF0D25005E59E2 /* globee_kadaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globee_kadaiUITests.swift; sourceTree = "<group>"; };
 		54604C0224AF0D25005E59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A7965524BEF5C700DC4176 /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 		54B74C7724B4F78200F6640D /* BookListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPageViewController.swift; sourceTree = "<group>"; };
 		54F6420624BEDD830033580A /* book_all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book_all.json; sourceTree = "<group>"; };
 		54F6420924BEDE310033580A /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		5454AD1124BCD64A005E9E66 /* UIKit+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */,
 				5454AD1224BCD64A005E9E66 /* UITableView+Cell.swift */,
 				5454AD1324BCD64A005E9E66 /* UICollectionView+Cell.swift */,
 				5454AD1424BCD64A005E9E66 /* Storyboardable.swift */,
@@ -251,8 +254,12 @@
 		5454AD1F24BCD67F005E9E66 /* Foundation+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				54A7965524BEF5C700DC4176 /* Locale+Extension.swift */,
+				540E8EF424AF2B5D00CA4779 /* TimeZone+Extension.swift */,
+				540E8EF624AF2D4500CA4779 /* String+Date.swift */,
 				5454AD3324BDA500005E9E66 /* NSNumber+String.swift */,
 				5454AD3824BDB163005E9E66 /* String+Extension.swift */,
+				540E8EE224AF129300CA4779 /* Collection+Extension.swift */,
 				5454AD3124BDA4E4005E9E66 /* Int+Extension.swift */,
 				5454AD2024BCD6B2005E9E66 /* NSObjectProtocol+ClassName.swift */,
 			);
@@ -432,11 +439,7 @@
 				5454AD1F24BCD67F005E9E66 /* Foundation+Extensions */,
 				5454AD1124BCD64A005E9E66 /* UIKit+Extensions */,
 				5454AD2224BD8E55005E9E66 /* SDWebImage+Extension.swift */,
-				540E8EF624AF2D4500CA4779 /* String+Date.swift */,
-				540E8EE224AF129300CA4779 /* Collection+Extension.swift */,
 				540E8EF224AF2AFB00CA4779 /* JSONSwifty+Date.swift */,
-				540E8EF424AF2B5D00CA4779 /* TimeZone+Extension.swift */,
-				540E8EFA24AF70C100CA4779 /* UIView+Extension.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				540E8EF524AF2B5D00CA4779 /* TimeZone+Extension.swift in Sources */,
 				5454AD3024BDA44A005E9E66 /* MemoryCache.swift in Sources */,
 				5454AD5E24BEAA95005E9E66 /* HeaderTabCollectionCell.swift in Sources */,
+				54A7965624BEF5C700DC4176 /* Locale+Extension.swift in Sources */,
 				5454AD6624BEBDAA005E9E66 /* BookDetailPresenter.swift in Sources */,
 				5454AD2324BD8E55005E9E66 /* SDWebImage+Extension.swift in Sources */,
 				5454AD4424BDB599005E9E66 /* Notificationable.swift in Sources */,
