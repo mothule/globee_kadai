@@ -54,7 +54,7 @@ class BookDetailViewController: UIViewController, Storyboardable {
         deleteButton.tintColor = Theme.color.accent
         navigationItem.rightBarButtonItem = deleteButton
         
-        presenter.fetchBookAndRefresh()
+        presenter.fetchBook()
     }
     
     @IBAction func onTouchedAddMyBooksButton(_ sender: Any) {

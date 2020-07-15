@@ -12,16 +12,18 @@ protocol BookDetailPresenter {
     var book: Book { get }
     var isAddedMyBook: Bool { get }
     
-    func fetchBookAndRefresh()
+    func fetchBook()
     func toggleMyBook()
     func authorAndPublisher() -> [String]
 }
 
 class BookDetailPresenterImpl: BookDetailPresenter {
-    private var viewer: BookDetailViewer!
-    private var repository: MyBookRepository!
-    private(set) var book: Book
-    private(set) var isAddedMyBook: Bool = false {
+    // UTが書きやすいようscopeをprivateではなくinternalにしてる.
+    // プロダクト側ではprotocolを使うので実害は少ない
+    var viewer: BookDetailViewer!
+    var repository: MyBookRepository!
+    var book: Book
+    var isAddedMyBook: Bool = false {
         didSet {
             viewer.updateAddedMyBookButton(isAddedMyBook: isAddedMyBook)
         }
@@ -33,7 +35,7 @@ class BookDetailPresenterImpl: BookDetailPresenter {
         self.book = book
     }
     
-    func fetchBookAndRefresh() {
+    func fetchBook() {
         repository.fetch(with: book).onSuccess({ [weak self] _ in
             self?.isAddedMyBook = true
         }).onFailure({ [weak self] error in

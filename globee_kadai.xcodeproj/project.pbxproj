@@ -67,6 +67,9 @@
 		54F6421024BEE10B0033580A /* BookCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6420F24BEE10B0033580A /* BookCollectionSpec.swift */; };
 		54F6421224BEE2CD0033580A /* TopCategorizedBookLineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6421124BEE2CD0033580A /* TopCategorizedBookLineSpec.swift */; };
 		54F6421424BEE3B30033580A /* SubCategorizedBookLineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6421324BEE3B30033580A /* SubCategorizedBookLineSpec.swift */; };
+		54F6421824BEE7110033580A /* BookDetailPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6421724BEE7110033580A /* BookDetailPresenterSpec.swift */; };
+		54F6421A24BEE7A20033580A /* MockVerifyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6421924BEE7A20033580A /* MockVerifyable.swift */; };
+		54F6421C24BEE8050033580A /* UIViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6421B24BEE8050033580A /* UIViewControllerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +156,9 @@
 		54F6420F24BEE10B0033580A /* BookCollectionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionSpec.swift; sourceTree = "<group>"; };
 		54F6421124BEE2CD0033580A /* TopCategorizedBookLineSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategorizedBookLineSpec.swift; sourceTree = "<group>"; };
 		54F6421324BEE3B30033580A /* SubCategorizedBookLineSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategorizedBookLineSpec.swift; sourceTree = "<group>"; };
+		54F6421724BEE7110033580A /* BookDetailPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenterSpec.swift; sourceTree = "<group>"; };
+		54F6421924BEE7A20033580A /* MockVerifyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVerifyable.swift; sourceTree = "<group>"; };
+		54F6421B24BEE8050033580A /* UIViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +395,7 @@
 			children = (
 				54F6420824BEDE1A0033580A /* Helpers */,
 				5454AD6B24BEDCAE005E9E66 /* Mocks */,
+				54F6421524BEE6EF0033580A /* ViewControllers */,
 				5454AD6724BED689005E9E66 /* Models */,
 				54604BF524AF0D25005E59E2 /* globee_kadaiTests.swift */,
 				54604BF724AF0D25005E59E2 /* Info.plist */,
@@ -472,8 +479,26 @@
 			isa = PBXGroup;
 			children = (
 				54F6420924BEDE310033580A /* BundleHelper.swift */,
+				54F6421924BEE7A20033580A /* MockVerifyable.swift */,
+				54F6421B24BEE8050033580A /* UIViewControllerMock.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		54F6421524BEE6EF0033580A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				54F6421624BEE6FE0033580A /* BookDetail */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		54F6421624BEE6FE0033580A /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				54F6421724BEE7110033580A /* BookDetailPresenterSpec.swift */,
+			);
+			path = BookDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,6 +739,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				54604BF624AF0D25005E59E2 /* globee_kadaiTests.swift in Sources */,
+				54F6421824BEE7110033580A /* BookDetailPresenterSpec.swift in Sources */,
+				54F6421A24BEE7A20033580A /* MockVerifyable.swift in Sources */,
+				54F6421C24BEE8050033580A /* UIViewControllerMock.swift in Sources */,
 				54F6421024BEE10B0033580A /* BookCollectionSpec.swift in Sources */,
 				54F6421424BEE3B30033580A /* SubCategorizedBookLineSpec.swift in Sources */,
 				54F6420A24BEDE310033580A /* BundleHelper.swift in Sources */,
