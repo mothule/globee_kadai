@@ -9,25 +9,28 @@
 import UIKit
 import PKHUD
 
+protocol BookDetailViewer {
+    func updateAddedMyBookButton(isAddedMyBook: Bool)
+    func showProgress()
+    func hideProgress()
+    func showAlert(message: String)
+}
+
 class BookDetailViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var bookImageView: BookImageView!
     @IBOutlet private weak var bookTitleLabel: UILabel!
-    @IBOutlet private weak var authorLabel: UILabel!
-    @IBOutlet private weak var publisherLabel: UILabel!
+    @IBOutlet private weak var firstLineLabel: UILabel!
+    @IBOutlet private weak var secondLineLabel: UILabel!
     @IBOutlet private weak var addMyBookButton: UIButton!
     @IBOutlet private weak var purchaseButton: UIButton!
     
     private let repository: MyBookRepository = MyBookRepositoryImpl()
     
-    private var book: Book!
-    private var isAddedMyBook: Bool = false {
-        didSet {
-            updateAddedMyBookButton(isAddedMyBook: isAddedMyBook)
-        }
-    }
-    
+    private var presenter: BookDetailPresenter!
+    private var book: Book { presenter.book }
+
     func setup(book: Book) {
-        self.book = book
+        self.presenter = BookDetailPresenterImpl(repository: MyBookRepositoryImpl(), viewer: self, book: book)
     }
 
     override func viewDidLoad() {
@@ -37,51 +40,25 @@ class BookDetailViewController: UIViewController, Storyboardable {
         bookImageView.setup(with: book.imageUrl)
         
         bookTitleLabel.attributedText = book.nameBook.decorate(by: [.lineHeight(bookTitleLabel.font.pointSize * 1.4)])
-        authorLabel.text = "著者：" + book.author
-        publisherLabel.text = "出版社：" + book.publisher
+        
+        let lineTexts = presenter.authorAndPublisher()
+        firstLineLabel.text = lineTexts[0]
+        secondLineLabel.text = lineTexts[1]
 
         purchaseButton.layer.cornerRadius = 4.0
         purchaseButton.backgroundColor = Theme.color.accent
         purchaseButton.setTitleColor(.white, for: .normal)
         purchaseButton.setTitle("購入", for: .normal)
-
-        isAddedMyBook = false
         
         let deleteButton = UIBarButtonItem(title: "データ削除", style: .plain, target: self, action: #selector(onTouchedDeleteDataOnNavBar(_:)))
         deleteButton.tintColor = Theme.color.accent
         navigationItem.rightBarButtonItem = deleteButton
         
-        repository.fetch(with: book).onSuccess({ [weak self] _ in
-            self?.isAddedMyBook = true
-        }).onFailure({ [weak self] error in
-            if case .fetchNotFoundError = error {
-                self?.isAddedMyBook = false
-            }
-        })
+        presenter.fetchBookAndRefresh()
     }
     
     @IBAction func onTouchedAddMyBooksButton(_ sender: Any) {
-        ProgressHUD.show()
-        
-        if isAddedMyBook {
-            repository.remove(of: book).onSuccess({ [weak self] _ in
-                self?.showAlert(message: "MyBookから削除しました。")
-                self?.isAddedMyBook = false
-                ProgressHUD.hide()
-            }).onFailure({ error in
-                self.showAlert(message: "MyBookからの削除に失敗しました。")
-                ProgressHUD.hide()
-            })
-        } else {
-            repository.add(with: book).onSuccess({ [weak self] _ in
-                self?.showAlert(message: "MyBookへ追加しました。")
-                self?.isAddedMyBook = true
-                ProgressHUD.hide()
-            }).onFailure({ error in
-                self.showAlert(message: "MyBookへの追加に失敗しました。")
-                ProgressHUD.hide()
-            })
-        }
+        presenter.toggleMyBook()
     }
     
     @objc private func onTouchedDeleteDataOnNavBar(_ sender: AnyObject) {
@@ -96,14 +73,10 @@ class BookDetailViewController: UIViewController, Storyboardable {
 
         present(actionSheet, animated: true, completion: nil)
     }
-    
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    private func updateAddedMyBookButton(isAddedMyBook: Bool) {
+}
+
+extension BookDetailViewController: BookDetailViewer {
+    func updateAddedMyBookButton(isAddedMyBook: Bool) {
         UIView.setAnimationsEnabled(false)
         defer {
             UIView.setAnimationsEnabled(true)
@@ -124,4 +97,14 @@ class BookDetailViewController: UIViewController, Storyboardable {
         addMyBookButton.layer.cornerRadius = 4.0
         addMyBookButton.layoutIfNeeded()
     }
+    
+    func showProgress() { ProgressHUD.show() }
+    func hideProgress() { ProgressHUD.hide() }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
 }

@@ -104,11 +104,11 @@
                     </view>
                     <connections>
                         <outlet property="addMyBookButton" destination="AMO-ya-OBv" id="Pt4-Vl-1RN"/>
-                        <outlet property="authorLabel" destination="wgD-j7-zdM" id="JBX-t4-dyI"/>
                         <outlet property="bookImageView" destination="pF1-8P-SQ4" id="6O7-kB-dMG"/>
                         <outlet property="bookTitleLabel" destination="JTH-Nu-iA6" id="6Ab-V5-3DF"/>
-                        <outlet property="publisherLabel" destination="HYR-zs-M6E" id="TRC-NT-vZZ"/>
+                        <outlet property="firstLineLabel" destination="wgD-j7-zdM" id="95c-ny-Xfa"/>
                         <outlet property="purchaseButton" destination="eO6-2H-NGf" id="VvB-PD-IxD"/>
+                        <outlet property="secondLineLabel" destination="HYR-zs-M6E" id="d3o-YS-PzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXc-bP-pCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
